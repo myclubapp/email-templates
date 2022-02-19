@@ -2,7 +2,6 @@ import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/compat/firestore'
 import firebase from 'firebase/compat/app';
-import '@papyrs/stylo';
 
 @Component({
   selector: 'app-template',
@@ -16,15 +15,19 @@ export class TemplatePage implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private afStore: AngularFirestore,
-    ) { 
+    ) {
 
 
+
+    // TODO: use ViewChild
 // Your editable element
 const div = document.querySelector('div[contenteditable="true"]');
 
+// TODO: use ViewChild
 // Stylo
 const stylo: any = document.querySelector('stylo-editor');
 
+// TODO: ngAfterViewInit or something, when stylo web components is loaded / mounted (class .hydrated should be applied for example) then assign values
 // Set the `containerRef` property
 stylo.containerRef = div;
 
