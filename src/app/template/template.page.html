@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>template: {{templateName}}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="primary" (click)="save()">
+        speichern
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">template: {{templateName}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Betreff</ion-label>
+      <ion-input type="text" value="{{template?.subject}}"></ion-input>
+    </ion-item>
+
+    <!-- Textarea with custom number of rows and cols -->
+    <ion-item>
+      <ion-label position="stacked">HTML</ion-label>
+      <ion-textarea rows="10" cols="20" placeholder="Enter any notes here..." value="{{template?.html}}"></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+
+  <stylo-editor></stylo-editor>
+
+  <div id="htmlpreview" contenteditable="true">
+
+
+  </div>
+
+  </ion-content>
