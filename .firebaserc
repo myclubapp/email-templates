@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "myclubmanagement"
+  },
+  "targets": {
+    "myclubmanagement": {
+      "hosting": {
+        "app": [
+          "mylcub-email-template"
+        ]
+      }
+    }
+  }
+}

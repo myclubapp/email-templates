@@ -1,0 +1,7 @@
+{
+  "name": "email-templates",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
