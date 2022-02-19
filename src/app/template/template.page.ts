@@ -22,17 +22,24 @@ export class TemplatePage implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private afStore: AngularFirestore,
-  ) {
-    // Your editable element
-    const div = document.querySelector('div[contenteditable="true"]');
-
+    ) {
     // Stylo
     const stylo: any = document.querySelector('stylo-editor');
 
-    // Set the `containerRef` property
-    stylo.containerRef = div;
+    // TODO: use ViewChild
+// Your editable element
+const div = document.querySelector('div[contenteditable="true"]');
 
-  }
+// TODO: use ViewChild
+// Stylo
+const stylo: any = document.querySelector('stylo-editor');
+
+// TODO: ngAfterViewInit or something, when stylo web components is loaded / mounted (class .hydrated should be applied for example) then assign values
+// Set the `containerRef` property
+stylo.containerRef = div;
+
+    }
+
 
   ngOnInit() {
     this.templateName = this.activatedRoute.snapshot.paramMap.get('id');
