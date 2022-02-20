@@ -1,7 +1,9 @@
 import {
   Component,
   OnInit,
-  AfterViewInit, ElementRef, ViewChild
+  AfterViewInit,
+  ElementRef,
+  ViewChild
 } from '@angular/core';
 import {
   ActivatedRoute
@@ -19,10 +21,14 @@ import '@papyrs/stylo';
   styleUrls: ['./template.page.scss'],
 })
 export class TemplatePage implements OnInit {
-  @ViewChild('styloeditor', {static: true}) stylo: ElementRef;
-  @ViewChild('htmlpreview', {static: true}) preview: ElementRef;
+  @ViewChild('styloeditor', {
+    static: true
+  }) stylo: ElementRef;
+  @ViewChild('htmlpreview', {
+    static: true
+  }) preview: ElementRef;
   //@ViewChild('div[contenteditable="true"]', {static: false}) content: ElementRef;
-  
+
 
   public templateName: string;
   public template: any = {};
@@ -30,24 +36,21 @@ export class TemplatePage implements OnInit {
     private activatedRoute: ActivatedRoute,
     private afStore: AngularFirestore,
   ) {
-    
+
   }
-  
-  ngOnInit() {
-  }
-  
+
+  ngOnInit() {}
+
   ngAfterViewInit() {
 
     this.templateName = this.activatedRoute.snapshot.paramMap.get('id');
     this.getTemplate(this.templateName).then(snapshot => {
 
-    // console.log(snapshot.data());
-    
-    // TODO: ngAfterViewInit or something, when stylo web components is loaded / mounted (class .hydrated should be applied for example) then assign values
-    // Set the `containerRef` property
-    this.template = snapshot.data();
-     
-      this.preview.nativeElement.innerHTML =  this.template.html;
+      // TODO: ngAfterViewInit or something, when stylo web components is loaded / mounted (class .hydrated should be applied for example) then assign values
+      // Set the `containerRef` property
+      this.template = snapshot.data();
+
+      this.preview.nativeElement.innerHTML = this.template.html;
       this.stylo.nativeElement.containerRef = this.preview;
       //document.getElementById('htmlpreview').innerHTML = this.template.html;
     });
@@ -59,10 +62,10 @@ export class TemplatePage implements OnInit {
     return this.afStore.collection('template').doc(id).get().toPromise();
   }
 
-  saveHTML(){
+  saveHTML() {
     this.afStore.collection('template').doc(this.templateName).set({
       html: this.preview.nativeElement.innerHTML
-    },{
+    }, {
       merge: true
     });
 
