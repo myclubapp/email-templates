@@ -42,7 +42,7 @@ export class AppComponent {
           data: element.data()
         });
       })
-      console.log(this.templateList);
+      // console.log(this.templateList);
 
     })
   }

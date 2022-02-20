@@ -5,8 +5,8 @@
     </ion-buttons>
     <ion-title>template: {{templateName}}</ion-title>
     <ion-buttons slot="primary">
-      <ion-button color="primary" (click)="save()">
-        speichern
+      <ion-button color="primary" (click)="saveHTML()">
+        preview speichern
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -19,24 +19,34 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
-    <ion-item>
-      <ion-label position="stacked">Betreff</ion-label>
-      <ion-input type="text" value="{{template?.subject}}"></ion-input>
-    </ion-item>
 
-    <!-- Textarea with custom number of rows and cols -->
-    <ion-item>
-      <ion-label position="stacked">HTML</ion-label>
-      <ion-textarea rows="10" cols="20" placeholder="Enter any notes here..." value="{{template?.html}}"></ion-textarea>
-    </ion-item>
+  <ion-accordion-group value="colors">
+    <ion-accordion value="colors">
 
-  </ion-list>
+      <ion-item slot="header">
+        <ion-label>Template Details</ion-label>
+      </ion-item>
 
-  <!--
-  <stylo-editor lang="de"></stylo-editor>
-  -->
-  <div id="htmlpreview" contenteditable="true">
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label position="stacked">Betreff</ion-label>
+          <ion-input type="text" value="{{template?.subject}}"></ion-input>
+        </ion-item>
+
+        <!-- Textarea with custom number of rows and cols -->
+        <ion-item>
+          <ion-label position="stacked">HTML</ion-label>
+          <ion-textarea rows="10" cols="20" placeholder="Enter any notes here..." value="{{template?.html}}">
+          </ion-textarea>
+        </ion-item>
+
+      </ion-list>
+    </ion-accordion>
+  </ion-accordion-group>
+
+
+  <stylo-editor #styloeditor></stylo-editor>
+  <div #htmlpreview contenteditable="true">
   </div>
 
-  </ion-content>
+</ion-content>
