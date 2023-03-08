@@ -83,7 +83,7 @@
   <!-- HIDDEN PREHEADER TEXT -->
   <div
     style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-    Hallo {{firstName}}! Wir haben deine Beitrittsanfrage an den Club {{clubName}} gesendet. </div>
+    Hallo {{teamName}}. Neue Beitrittsanfrage für dein Team {{teamName}}. </div>
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <!-- LOGO -->
     <tr>
@@ -108,7 +108,7 @@
           <tr>
             <td bgcolor="#ffffff" align="center" valign="top"
               style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Titillium Web', Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-              <h1 style="font-size: 48px; font-weight: 400; margin: 0;">Hallo {{firstName}}</h1>
+              <h1 style="font-size: 48px; font-weight: 400; margin: 0;">Hallo {{teamName}}</h1>
             </td>
           </tr>
         </table>
@@ -123,13 +123,27 @@
           <tr>
             <td bgcolor="#ffffff" align="left"
               style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-              <p style="margin: 0;"> Wir haben deine Beitrittsanfrage an den Club {{clubName}} gesendet. Bitte gedulde dich noch etwas. </p>
+              <p style="margin: 0;"> Wir haben eine neue Beitrittsanfrage für dein Team {{teamName}} erhalten: </p>
             </td>
           </tr> <!-- COPY -->
           <tr>
             <td bgcolor="#ffffff" align="left"
               style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;"> Sobald deine Anfrage von den Verantwortlichen angenommen wurde, kannst du dich wieder voll und ganz deiner Lieblingsbeschäftigung widmen. 
+              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;"> Die Person:
+              </p>
+            </td>
+          </tr> <!-- COPY -->
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;">{{firstName}} {{lastName}} {{email}}
+              </p>
+            </td>
+          </tr> <!-- COPY -->
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;">möchte deinem Team beitreten. Bitte bearbeite die Anfrage in der App, indem du unter Administration, dein Team öffnest.
               </p>
             </td>
           </tr> <!-- COPY -->
