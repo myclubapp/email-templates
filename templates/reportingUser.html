@@ -1,4 +1,4 @@
-{{> _HEADER }}
+{{> HEADER }}
 
 <body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;"> <!-- HIDDEN PREHEADER TEXT -->
   <div
@@ -31,21 +31,80 @@
               style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
               <p style="margin: 0;"> Hier kommt dein my-club Update der Woche!</p>
             </td>
-          </tr> <!-- COPY -->
+          </tr>
+
+          <!-- Training -->
           <tr>
             <td bgcolor="#ffffff" align="left"
               style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;"> HIER STEHT
-                DAS UPDATE </p>
+              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;"> Deine
+                Trainings von nächster Woche: </p>
             </td>
-          </tr> <!-- COPY -->
+          </tr>
+
+          <!-- HELFER -->
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;"> Hier ist deine Hilfe gefragt: </p>
+            </td>
+          </tr>
+     
+
+          <!-- NEWS -->
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;"> Deine
+                Club-News der letzten Tage: </p>
+            </td>
+          </tr>
+          <!-- CLUB NEWS -->
+          {{#clubNews}}
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;"> {{title}}
+                {{leadText}}
+              </p>
+            </td>
+          </tr> <!-- Button -->
+          <tr>
+            <td bgcolor="#ffffff" align="left">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center" style="border-radius: 3px;" bgcolor="#ffc20e"><a href="{{url}}"
+                            target="_blank"
+                            style="font-size: 20px; font-family: 'Maven Pro', Arial, sans-serif; color: #000000; text-decoration: none; color: #000000; text-decoration: none; padding: 15px 25px; border-radius: 5px; border: 1px solid #ffc20e; display: inline-block;">Beitrag
+                            lesen</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {{/clubNews}}
+
+
+          <!-- EVENTS -->
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+              <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;"> Das sind die nächsten Events: </p>
+            </td>
+          </tr>     
+
           {{> _GREETING }}
-      </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
-  </td>
-</tr>
-<!-- FOOTER -->
-{{> _FOOTER }}
-</table>
+        </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+      </td>
+    </tr>
+    <!-- FOOTER -->
+    {{> _FOOTER }}
+  </table>
 </body>
 
 </html>
