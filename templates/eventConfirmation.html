@@ -1,0 +1,71 @@
+{{> _HEADER }}
+
+<body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;"> <!-- HIDDEN PREHEADER TEXT -->
+    <div
+        style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+        Bestätigung Event {{eventName}}. </div>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%"> <!-- LOGO -->
+        {{> _LOGO }}
+        <!-- HERO -->
+        <tr>
+            <td bgcolor="#000000" align="center" style="padding: 0px 10px 0px 10px;">
+                <!--[if (gte mso 9)|(IE)]> <table align="center" border="0" cellspacing="0"                                     cellpadding="0" width="600"> <tr> <td align="center" valign="top" width="600">                                     <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                    <tr>
+                        <td bgcolor="#ffffff" align="center" valign="top"
+                            style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Titillium Web', Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+                            <h1 style="font-size: 48px; font-weight: 400; margin: 0;">Hallo {{firstName}} {{lastName}}!
+                            </h1>
+                        </td>
+                    </tr>
+                </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+            </td>
+        </tr> <!-- COPY BLOCK -->
+        <tr>
+            <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+                <!--[if (gte mso 9)|(IE)]> <table align="center" border="0" cellspacing="0"                                     cellpadding="0" width="600"> <tr> <td align="center" valign="top" width="600">                                     <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"> <!-- COPY -->
+                    <tr>
+                        <td bgcolor="#ffffff" align="left"
+                            style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            <p style="margin: 0;"> Du hast dich für das Event <b>{{eventName}}</b> angemeldet: </p>
+                            <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee; color: #666666;">Event:</td>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee; color: #333333;"><b>{{eventName}}</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee; color: #666666;">Beschreibung:</td>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee; color: #333333;"><b>{{eventDescription}}</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee; color: #666666;">Ort:</td>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee; color: #333333;"><b>{{eventOrt}}</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee; color: #666666;">Datum:</td>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee; color: #333333;"><b>{{eventDatum}}</b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr> <!-- COPY -->
+                    <tr>
+                        <td bgcolor="#ffffff" align="left"
+                            style="padding: 0px 30px 40px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                            <p
+                                style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;">
+                                Bitte gib uns Bescheid, falls du nicht teilnehmen kannst. Beachte ausserdem, dass eine Abmeldung über die App nur bis zum <b>{{abmeldefrist}}</b> möglich ist. </p>
+                                <p style="margin: 0;color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif;">
+                                </p>
+                        </td>
+                    </tr> <!-- COPY -->
+                    {{> _GREETING }}
+                </table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+            </td>
+        </tr>
+        <!-- FOOTER -->
+        {{> _FOOTER }}
+    </table>
+</body>
+
+</html>
