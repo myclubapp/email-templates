@@ -1,0 +1,64 @@
+{{> _HEADER }}
+
+<body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
+  <div
+    style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+    Hallo {{firstName}} {{lastName}}, deine Rechnung für {{clubName}} ist jetzt verfügbar. Verwendungszweck: {{purpose}}.
+  </div>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    {{#if clublogo}}
+      {{> _CLUBLOGO }}
+    {{else}}
+      {{> _LOGO }}
+    {{/if}}
+
+    <!-- HERO -->
+    <tr>
+      <td bgcolor="#000000" align="center" style="padding: 0px 10px 0px 10px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+          <tr>
+            <td bgcolor="#ffffff" align="center" valign="top"
+              style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Titillium Web', Arial, sans-serif; font-size: 36px; font-weight: 400; letter-spacing: 2px; line-height: 42px;">
+              <h1 style="font-size: 36px; font-weight: 400; margin: 0;">Rechnung für {{clubName}}</h1>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- COPY BLOCK -->
+    <tr>
+      <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 20px 30px 20px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+              <p style="margin: 0;">
+                Hallo {{firstName}} {{lastName}},<br><br>
+                anbei findest du deine Rechnung für den Verein <b>{{clubName}}</b>.<br>
+                <b>Rechnungsbetrag:</b> {{invoiceAmount}} {{invoiceCurrency}}<br>
+                <b>Verwendungszweck:</b> {{purpose}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 0px 30px 20px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+              <p style="margin: 0;">
+                Im Anhang dieser E-Mail findest du die Rechnung als PDF mit integriertem QR-Code für die einfache Bezahlung.<br>
+                Bitte begleiche den Betrag bis zum angegebenen Fälligkeitsdatum.<br><br>
+                Bei Fragen wende dich bitte an den Verein.
+              </p>
+            </td>
+          </tr>
+          {{> _GREETING }}
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    {{> _FOOTER }}
+  </table>
+</body>
+
+</html>
