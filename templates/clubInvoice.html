@@ -41,6 +41,16 @@
               </p>
             </td>
           </tr>
+          {{#if hasIncompleteProfile}}
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 0px 30px 20px 30px;">
+              <p style="margin: 0; padding: 15px; background-color: #fff3cd; border-left: 4px solid #ffc107; color: #856404; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 22px; border-radius: 4px;">
+                ⚠️ {{incompleteProfileNote}}
+              </p>
+            </td>
+          </tr>
+          {{/if}}
           <tr>
             <td bgcolor="#ffffff" align="left"
               style="padding: 0px 30px 20px 30px; color: #666666; font-family: 'Maven Pro', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
